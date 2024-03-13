@@ -288,21 +288,46 @@ else:
 
 # 9 
 ```ruby
- pais = input("De que pais americano deseas conocer su capital? (escribelo en minusculas) ")
+pais = input("De qué país americano deseas conocer su capital? (escríbelo en minúsculas) ")
+
+america = {
+    "canada": "Ottawa",
+    "estados unidos": "Washington D.C",
+    "mexico": "Ciudad de México",
+    "belice": "Belmopán",
+    "costa rica": "San José",
+    "el salvador": "San Salvador",
+    "guatemala": "Ciudad de Guatemala",
+    "honduras": "Tegucigalpa",
+    "nicaragua": "Managua",
+    "panamá": "Ciudad de Panamá",
+    "argentina": "Buenos Aires",
+    "bolivia": "Sucre",
+    "brasil": "Brasilia",
+    "chile": "Santiago de Chile",
+    "colombia": "Bogotá DC",
+    "ecuador": "Quito",
+    "paraguay": "Asunción",
+    "perú": "Lima",
+    "surinam": "Paramaribo",
+    "trinidad y tobago": "Puerto España",
+    "uruguay": "Montevideo",
+    "venezuela": "Caracas"
+}
 
 match pais:
   case "canada":
-    print("Otawwa")
+    print("Ottawa")
   case "estados unidos":
-    print("Washington DC")
+    print("Washington D.C")
   case "mexico":
-    print("Ciudad de Mexico")
+    print("Ciudad de México")
   case "belice":
     print("Belmopán")
   case "costa rica":
     print("San José")
   case "el salvador":
-    print("san salvador")
+    print("San Salvador")
   case "guatemala":
     print("Ciudad de Guatemala")
   case "honduras":
@@ -310,9 +335,9 @@ match pais:
   case "nicaragua":
     print("Managua")
   case "panamá":
-    print("panamá")
+    print("Panamá")
   case "argentina":
-    print("Buenos aires")
+    print("Buenos Aires")
   case "bolivia":
     print("Sucre")
   case "brasil":
@@ -320,47 +345,23 @@ match pais:
   case "chile":
     print("Santiago de Chile")
   case "colombia":
-    print("Bogota DC   B)")
+    print("Bogotá DC")
   case "ecuador":
     print("Quito")
   case "paraguay":
-    print("Asuncion")
+    print("Asunción")
   case "perú":
     print("Lima")   
   case "surinam":
-    print("Parabarimo")
+    print("Paramaribo")
   case "trinidad y tobago":
     print("Puerto España")
   case "uruguay":
     print("Montevideo")
-  case "Venezuela":
+  case "venezuela":
     print("Caracas")
-  case "antigua y barbuda":
-    print("Saint Jhon")
-  case "bahamas":
-    print("Nasáu")
-  case "barbados":
-    print("Bridgetown")
-  case "cuba":
-    print("La Habana")
-  case "dominicana":
-    print("Roseau")
-  case "granada":
-    print("Saint George")
-  case "guyana":
-    print("Georgetown")
-  case "haití":
-    print("Puerto Principe")
-  case "jamaica":
-    print("Kingston")
-  case "republica dominicana":
-    print("Santo Domingo")
-  case "san cristobal y nieves":
-    print("Basseterre")
-  case "san vicente y las granadinas":
-    print("Kingstown")
-  case "santa lucia":
-    print("Castries")
+  case _ if pais not in america:
+    print("Ese país no es de América")
 ```
 <details>
   <summary>explicacion</summary>
