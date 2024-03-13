@@ -12,11 +12,11 @@
 <details>
   <summary>Con la elegancia de siempre sabernos...</summary>
   
-  ...SANGRE FRIA
+>  ...SANGRE FRIA
   
 </details>
 
-# 1 (quiz python)
+# 1 
 
 <details>
   <summary>DORSAL 9</summary>
@@ -61,7 +61,7 @@ else:
 <details>
   <summary>explicacion</summary>
   
-  Al dar inicio al código, se despliega un mensaje en la pantalla que invita al usuario a ingresar tres números con el fin de determinar cuál es el mayor entre ellos. Con esta premisa, declaro tres variables flotantes, ya que estos números pueden contener valores decimales. Seguidamente, el programa solicita al usuario introducir cada número mediante mensajes claros y concisos, indicando 'Por favor, introduce el primer número', 'Por favor, introduce el segundo número' y 'Por favor, introduce el tercer número'. Una vez recogidos los datos, procedo a ejecutar una serie de condiciones: si el primer número supera en valor tanto al segundo como al tercero, se imprime en pantalla que el primer número es el mayor. En caso contrario, si el segundo número es mayor, se informa que este es el mayor. Y, finalmente, si ninguno de los dos escenarios anteriores se cumple, se concluye que el tercer número ingresado es el mayor. Este enfoque asegura una respuesta clara y precisa sobre cuál de los números ingresados es el mayor
+> Al dar inicio al código, se despliega un mensaje en la pantalla que invita al usuario a ingresar tres números con el fin de determinar cuál es el mayor entre ellos. Con esta premisa, declaro tres variables flotantes, ya que estos números pueden contener valores decimales. Seguidamente, el programa solicita al usuario introducir cada número mediante mensajes claros y concisos, indicando 'Por favor, introduce el primer número', 'Por favor, introduce el segundo número' y 'Por favor, introduce el tercer número'. Una vez recogidos los datos, procedo a ejecutar una serie de condiciones: si el primer número supera en valor tanto al segundo como al tercero, se imprime en pantalla que el primer número es el mayor. En caso contrario, si el segundo número es mayor, se informa que este es el mayor. Y, finalmente, si ninguno de los dos escenarios anteriores se cumple, se concluye que el tercer número ingresado es el mayor. Este enfoque asegura una respuesta clara y precisa sobre cuál de los números ingresados es el mayor
 </details>
 
 # 3
@@ -83,9 +83,8 @@ else:
 ```
 <details>
   <summary>explicacion</summary>
-  # Numeros pares o impares
 
-El objetivo de este algoritmo es determinar si un número ingresado por el usuario es par o impar. Comenzamos solicitando al usuario que ingrese un número utilizando la función input(), y almacenamos este valor en una variable llamada 'ingresada'. Posteriormente, aplicamos la operación '%' para obtener el residuo de la división entre el número ingresado y 2. Si este residuo es igual a 0, se utiliza un condicional para imprimir en pantalla que el número ingresado es par. En caso contrario, se imprime que es impar. Este enfoque permite una determinación clara y precisa del carácter par o impar del número ingresado.
+> El objetivo de este algoritmo es determinar si un número ingresado por el usuario es par o impar. Comenzamos solicitando al usuario que ingrese un número utilizando la función input(), y almacenamos este valor en una variable llamada 'ingresada'. Posteriormente, aplicamos la operación '%' para obtener el residuo de la división entre el número ingresado y 2. Si este residuo es igual a 0, se utiliza un condicional para imprimir en pantalla que el número ingresado es par. En caso contrario, se imprime que es impar. Este enfoque permite una determinación clara y precisa del carácter par o impar del número ingresado.
 
 </details>
 
@@ -112,9 +111,17 @@ else:
 <details>
   <summary>explicacion</summary>
   
+> El código comienza declarando dos variables, x y y, como números reales. Luego, solicita al usuario que ingrese dos números reales diferentes utilizando la función input().
+El programa verifica si y es igual a cero. Si es así, imprime un mensaje advirtiendo al usuario que la división por cero no está permitida y le pide que ingrese otro valor.
+Si y no es cero, el programa verifica si x es múltiplo de y. Esto se hace comprobando si el residuo de la división de x entre y es cero. Si es cero, imprime un mensaje indicando que x es múltiplo de y.
+Si x no es múltiplo de y, el programa imprime un mensaje indicando que x no es múltiplo de y.
+
 </details>
 
 # 5 
+
+´´´mermaid
+´´´
 
 ```ruby
   print("Introduzca 3 números a continuación, se determinará si la suma del primer y el segundo número es mayor, menor o igual que el tercer número")
@@ -132,12 +139,239 @@ else :
 ```
 <details>
   <summary>explicacion</summary>
-  Ahora nos adentramos en el quinto punto, donde se desarrolla un programa que analiza tres números para determinar si la suma del primero y el segundo es mayor, menor o igual que el tercer número. Para ello, declaramos tres variables: N1, N2 y N3, todas ellas de tipo flotante para admitir números reales.
-
+  
+>  Ahora nos adentramos en el quinto punto, donde se desarrolla un programa que analiza tres números para determinar si la suma del primero y el segundo es mayor, menor o igual que el tercer número. Para ello, declaramos tres variables: N1, N2 y N3, todas ellas de tipo flotante para admitir números reales.
 Seguidamente, solicitamos al usuario que ingrese cada uno de estos números mediante la función input(), asignando cada entrada a las respectivas variables. Posteriormente, calculamos la suma del primer y segundo número y la almacenamos en una nueva variable llamada 'suma1n2', cuyo valor es igual a la suma de N1 y N2.
-
 A continuación, aplicamos un conjunto de condicionales para determinar la relación entre esta suma y el tercer número (N3). Si la suma 1N2 es mayor que N3, se imprime en pantalla que 'la suma del primer y segundo número es {suma1n2} y es mayor que el tercer número'. Si la suma 1n2 es menor que N3, se imprime que 'la suma del primer y segundo número es {suma1n2} y es menor que el tercer número'. En caso de que ninguna de las condiciones anteriores se cumpla, se imprime que 'la suma del primer y segundo número es {suma1n2} y es igual al tercer número'. Este enfoque permite una evaluación clara y precisa de la relación entre los números ingresados.
+
+
 </details>
+
+# 6
+```ruby
+ #Algoritmo para identificar si una letra cualquiera es una vocal o consonante
+
+x = input("Ingrese una letra: ")
+
+#Permitimos unicamente el ingreso de letras
+while x.isdigit() !=False:
+    print("El dato que ingresaste no es una letra")
+    x= input("Ingrese una letra: ")
+
+#Creamos una lista que contenga las vocales para asi poder almacenarlas en una variable
+vocales = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"]
+if x in vocales:
+    print("La letra", x , "es una vocal")
+else:
+    print("La letra", x , "es una consonante")
+
+```
+<details>
+  <summary>explicacion</summary>
+  
+> Para poder identificar si la letra ingresada es una vocal o consonante primero tenemos que estar seguro que el dato ingresado por el usuario sea una letra. Para esto empleamos un bucle while junto a la funcion .isdigit que nos ayudara a identificar la naturaleza del dato ingresado y solo se ejecutara hasta que la condicion sea falsa.
+Luego a esto, creamos una lista que contenga las vocales y mediante el condicional if-else nos va a imprimir si es una vocal dependiendo si la letra introducida hace parte de la lista, y en caso contrario a no estar se marcara  como una consonante.
+  
+</details>
+
+# 7
+```ruby
+ # Algoritmo para realizar operaciones en base a los numeros ingresados
+
+numeros = []
+
+numeros.append(float(input("Ingrese el primer numero real: ")))
+numeros.append(float(input("Ingrese el segundo numero real: ")))
+numeros.append(float(input("Ingrese el tercer numero real: ")))
+numeros.append(float(input("Ingrese el cuarto numero real: ")))
+numeros.append(float(input("Ingrese el quinto numero real: ")))
+
+# PROMEDIO
+promedio = 0
+for numero in numeros:
+  promedio += numero
+
+print("\nEl promedio de los numeros es: " + str(promedio/5))
+
+# MEDIANA
+n = len(numeros)
+for i in range(n):
+    # Últimos i elementos ya están ordenados, no necesitan ser revisados
+    for j in range(0, n - i - 1):
+        # Comparar elementos adyacentes y intercambiar si están en el orden incorrecto
+        if numeros[j] > numeros[j + 1]:
+            numeros[j], numeros[j + 1] = numeros[j + 1], numeros[j]
+
+print("La mediana es " + str(numeros[2]))
+
+# PROMEDIO MULTIPLICATIVO
+promedioMul = 1
+for numero in numeros:
+  promedioMul *= numero
+
+print("El promedio multiplicativo de los numeros es: " + str(pow(promedioMul, 1/5)))
+
+# ASCENDENTE
+# Se ordena en la linea 19.
+print("La lista ordenada de forma ascendente es la siguiente: " + str(numeros))
+
+# DESCENDENTE
+n = len(numeros)
+for i in range(n - 1):
+    # Encontrar el índice del elemento máximo en la porción no ordenada
+    max_index = i
+    for j in range(i + 1, n):
+        if numeros[j] > numeros[max_index]:
+            max_index = j
+
+    # Intercambiar el elemento máximo con el primer elemento no ordenado
+    numeros[i], numeros[max_index] = numeros[max_index], numeros[i]
+
+print("La lista ordenada de forma descendente es la siguiente: " + str(numeros))
+
+
+# POTENCIA DEL MAYOR ELEVADO AL MENOR
+mayor = max(numeros)
+menor = min(numeros)
+print("La potencia del mayor numero elevado al menor numero es la siguiente: " + str(mayor**menor))
+
+# Raiz cubica del menor numero
+print("La raiz cubica del menor numero es: " + str(menor**1/3))
+```
+<details>
+  <summary>explicacion</summary>
+  
+</details>
+
+# 8
+```ruby
+ frecuencia : float
+# Declaramos la variable
+frecuencia = float(input("ingrese la frecuenca de una onda en Hz para saber en que region del espectro electromagnetico se encuentra: "))
+if frecuencia > 30.e18:
+    print("su onda se encuenra en la region de rayos Gamma")
+elif frecuencia > 30.0e15:
+    print("su onda se encuenra en la region de rayos X")
+elif frecuencia > 1.5e15:
+    print("su onda se encuenra en la region Ultravioleta extrema")
+elif frecuencia > 7.89e14:
+    print("su onda se encuenra en la region Ultravioleta cercana")
+elif frecuencia > 384e12:
+    print("su onda se encuenra en la region del Espectro visible")
+elif frecuencia > 120e12:
+    print("su onda se encuenra en la region de Infrarrojo cercano")
+elif frecuencia > 6.00e12:
+    print("su onda se encuenra en la region de Infrarrojo medio")
+elif frecuencia > 300e9:
+    print("su onda se encuenra en la region de Infrarrojo lejano/submilimetrico")
+elif frecuencia > 3e8:
+    print("su onda se encuenra en la region de Microondas")
+elif frecuencia > 300e6:
+    print("su onda se encuenra en la region de Ultra Alta Frecuencia-Radio")
+elif frecuencia > 30e6:
+    print("su onda se encuenra en la region de Muy Alta Frecuencia-Radio")
+elif frecuencia > 1.7e6:
+    print("su onda se encuenra en la region de Onda Corta-Radio")
+elif frecuencia > 650e3:
+    print("su onda se encuenra en la region de Onda Media-Radio")
+elif frecuencia > 30e3:
+    print("su onda se encuenra en la region de Onda Larga-Radio")
+else:
+    print("su onda se encuenra en la region Muy baja de frecuencia-Radio")
+```
+<details>
+  <summary>explicacion</summary>
+  
+> El código solicita al usuario ingresar la frecuencia de una onda electromagnética en Hercios (Hz). Luego, utiliza una serie de comparaciones condicionales para determinar en qué región del espectro electromagnético se encuentra la onda. Estas comparaciones se basan en valores límite de frecuencia expresados en notación científica. Después de evaluar la frecuencia ingresada, imprime un mensaje indicando la región del espectro electromagnético en la que se encuentra la onda, según los resultados de las comparaciones realizadas.
+
+</details>
+
+# 9 
+```ruby
+ pais = input("De que pais americano deseas conocer su capital? (escribelo en minusculas) ")
+
+match pais:
+  case "canada":
+    print("Otawwa")
+  case "estados unidos":
+    print("Washington DC")
+  case "mexico":
+    print("Ciudad de Mexico")
+  case "belice":
+    print("Belmopán")
+  case "costa rica":
+    print("San José")
+  case "el salvador":
+    print("san salvador")
+  case "guatemala":
+    print("Ciudad de Guatemala")
+  case "honduras":
+    print("Tegucigalpa")
+  case "nicaragua":
+    print("Managua")
+  case "panamá":
+    print("panamá")
+  case "argentina":
+    print("Buenos aires")
+  case "bolivia":
+    print("Sucre")
+  case "brasil":
+    print("Brasilia")
+  case "chile":
+    print("Santiago de Chile")
+  case "colombia":
+    print("Bogota DC   B)")
+  case "ecuador":
+    print("Quito")
+  case "paraguay":
+    print("Asuncion")
+  case "perú":
+    print("Lima")   
+  case "surinam":
+    print("Parabarimo")
+  case "trinidad y tobago":
+    print("Puerto España")
+  case "uruguay":
+    print("Montevideo")
+  case "Venezuela":
+    print("Caracas")
+  case "antigua y barbuda":
+    print("Saint Jhon")
+  case "bahamas":
+    print("Nasáu")
+  case "barbados":
+    print("Bridgetown")
+  case "cuba":
+    print("La Habana")
+  case "dominicana":
+    print("Roseau")
+  case "granada":
+    print("Saint George")
+  case "guyana":
+    print("Georgetown")
+  case "haití":
+    print("Puerto Principe")
+  case "jamaica":
+    print("Kingston")
+  case "republica dominicana":
+    print("Santo Domingo")
+  case "san cristobal y nieves":
+    print("Basseterre")
+  case "san vicente y las granadinas":
+    print("Kingstown")
+  case "santa lucia":
+    print("Castries")
+```
+<details>
+  <summary>explicacion</summary>
+ 
+> Este código solicita al usuario que ingrese el nombre de un país americano en minúsculas y luego muestra la capital correspondiente a ese país. Utiliza una estructura de control llamada match (del condicional "case/switch" ya conocido) para comparar el país ingresado con una lista de países y sus capitales. Si el país coincide con uno de los casos definidos, se imprime la capital correspondiente. Por ejemplo, si el usuario ingresa "canada", se imprime "Otawwa". Cada caso en el match maneja un país específico y su capital asociada, lo que facilita al usuario obtener la información deseada de manera rápida y directa.
+
+  
+</details>
+
+
+# 10
 
 ```mermaid
 graph TB;
@@ -161,3 +395,21 @@ graph TB;
     E --> I[El tiempo que se demora el corredor más rápido de los tiempos, el mismísimo Usain Bolt; son: *tiempobolt* segundos]
 
 ```
+
+```ruby
+ 
+```
+<details>
+  <summary>explicacion</summary>
+  
+> El punto 10 es un programa que dada una distancia, se calcula el tiempo que le tomaría la luz recorrer esa distancia, al sonido en el aire, al vehículo comercial más veloz y al corredor Usain Bolt 
+hacemos muchos comentarios en este código para poder entender que se tiene que hacer 
+primero, declaramos las magnitudes en metro por segundo, con lo cual la luz es flotante y es de 299792458 m/s
+El sonido también flotante y es de 343.2 m/s, después concluimos que el carro comercial más rápido es el SSC tatuara, con lo cual su magnitud también flotante y es de 141.31 m/s y la magnitud de Bolt también es flotante y cuenta con 12.2 m/s 
+el siguiente paso es imprimir un mensaje que dice: “a continuación escribe una determinada distancia a la cual se le van a aplicar diversos cálculos, entre ellos; tiempos que le tomaría la luz recorrer la distancia, al sonido, al vehículo y a Bolt 
+después, se determina una variable llamada dist, es flotante y se le da un input que dice: “cuál es la distancia a analizar? (escríbala en Metros), con lo cual, el usuario escribe su distancia y después se da un comentario que es la fórmula de tiempo es igual a la distancia sobre la velocidad 
+con lo cual determinamos que tiemp luz es igual a la dist sobre luz, tiemposonido, tiemposcc y tiempobolt.
+finalmente, tenemos cada variable determinada y después se imprime el mensaje que resulta de cada variable. cuánto es el tiempo que se demora cada magnitud, por ejemplo la luz, el sonido en el viento, el tatuara y el corredor más rápido de todos los tiempos
+
+</details>
+
