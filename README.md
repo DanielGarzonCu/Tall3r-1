@@ -66,8 +66,19 @@ else:
 
 # 3
 
-´´´mermaid
-´´´
+```mermaid
+graph TB;
+    
+    A(Inicio)
+    A --> B[n: int]
+    B --> C[numero n]
+    C --> D[dividir n/2]
+    D --> E{¿El residuo es 0?}
+    E -->|Si| F[El numero es par]
+    E -->|No| G[El numero es impar]
+    F -->H(Fin)
+    G -->H(Fin)
+```
 ```ruby
   #Algoritmo para identificar si un numero es par o impar
 
@@ -120,8 +131,20 @@ Si x no es múltiplo de y, el programa imprime un mensaje indicando que x no es 
 
 # 5 
 
-´´´mermaid
-´´´
+```mermaid
+graph TB;
+    
+  A[Clase comparación suma n1+n2 y comparación n3] --> B[inicio] --> C[Algoritmo Principal] --> D[inicio] --> E[Introduzca 3 números a continuación, se determinará si la suma del primer y el segundo número es mayor, menor o igual que el tercer número]
+    E-->F[Introduzca el primer número]-->G[leer n1:float]-->H[Introduzca el segundo número]-->I[leer n2:float]-->J[Introduzca el tercer número]-->K[leer n3:float]
+    K --> L[suma1n2 = n1 + n2] -->M{si suma1n2>n3}-->N[La suma del primer y segundo número es *suman1n2* y es mayor que el tercer número]
+    M-->|sino si|O[La suma del primer y segundo número es *suman1n2* y es menor que el tercer número]
+    M --> |sino| P[La suma del primer y segundo número es *suman1n2* y es igual que el tercer número]
+    
+    
+    O-->Z[Fin Algoritmo Principal]-->x[Fin]
+    P-->Z
+    N-->Z
+```
 
 ```ruby
   print("Introduzca 3 números a continuación, se determinará si la suma del primer y el segundo número es mayor, menor o igual que el tercer número")
@@ -176,7 +199,7 @@ Luego a esto, creamos una lista que contenga las vocales y mediante el condicion
 
 # 7
 ```ruby
- # Algoritmo para realizar operaciones en base a los numeros ingresados
+# Algoritmo para realizar operaciones en base a los numeros ingresados
 
 numeros = []
 
@@ -196,9 +219,8 @@ print("\nEl promedio de los numeros es: " + str(promedio/5))
 # MEDIANA
 n = len(numeros)
 for i in range(n):
-    # Últimos i elementos ya están ordenados, no necesitan ser revisados
     for j in range(0, n - i - 1):
-        # Comparar elementos adyacentes y intercambiar si están en el orden incorrecto
+        # Se comparan los numeros e intercambia si estan en el orden incorrecto
         if numeros[j] > numeros[j + 1]:
             numeros[j], numeros[j + 1] = numeros[j + 1], numeros[j]
 
@@ -209,7 +231,7 @@ promedioMul = 1
 for numero in numeros:
   promedioMul *= numero
 
-print("El promedio multiplicativo de los numeros es: " + str(pow(promedioMul, 1/5)))
+print("El promedio multiplicativo de los numeros es: " + str(promedioMul**(1/5)))
 
 # ASCENDENTE
 # Se ordena en la linea 19.
@@ -218,13 +240,13 @@ print("La lista ordenada de forma ascendente es la siguiente: " + str(numeros))
 # DESCENDENTE
 n = len(numeros)
 for i in range(n - 1):
-    # Encontrar el índice del elemento máximo en la porción no ordenada
+    # Encontrar el indice del elemento maximo en la porcion no ordenada
     max_index = i
     for j in range(i + 1, n):
         if numeros[j] > numeros[max_index]:
             max_index = j
 
-    # Intercambiar el elemento máximo con el primer elemento no ordenado
+    # Intercambiar el elemento maximo con el primer elemento no ordenado
     numeros[i], numeros[max_index] = numeros[max_index], numeros[i]
 
 print("La lista ordenada de forma descendente es la siguiente: " + str(numeros))
@@ -233,14 +255,25 @@ print("La lista ordenada de forma descendente es la siguiente: " + str(numeros))
 # POTENCIA DEL MAYOR ELEVADO AL MENOR
 mayor = max(numeros)
 menor = min(numeros)
-print("La potencia del mayor numero elevado al menor numero es la siguiente: " + str(mayor**menor))
+print("La potencia del mayor numero elevado al menor numero es la siguiente: " + str(mayor**(menor)))
 
 # Raiz cubica del menor numero
-print("La raiz cubica del menor numero es: " + str(menor**1/3))
+print("La raiz cubica del menor numero es: " + str(menor**(1/3)))
 ```
 <details>
   <summary>explicacion</summary>
   
+> El algoritmo se encarga de realizar distintas operaciones en base a los numeros que ingresa el usuario. 
+Como primer paso, vamos a crear una lista vacia donde se van a almacenar los numeros que vaya ingresando el usuario gracias al comando .append que va a ir guardando esos numeros en la lista a medida que se ingresen.
+Luego de esto el algoritmo procede a realizar las operaciones unas tras de otra.
+Primero empieza a calcular el promedio, al que le vamos a dar un valor de 0 y que posteriormente va a ir sumando cada numero a medida que se ingrese y al final lo va a dividir entre 5.
+Para calcular la mediana, un algoritmo se encargara de ordenar los numeros de forma ascendente y despues de eso buscara el de la mitad, en este caso el que ubica la posicion central
+Para organizarlos de forma ascendente, el algorimo va a aprovechar el orden que ya se le dio al calcular la media y los imprime
+Para el promedio multiplicativo, vamos a realizar un proceso parecido al del promedio, pero en este caso vamos a multiplicar cada numero empezando desde el uno y se va a multiplicar por cada dato que va ingresando el usuario " *= "
+Para organizarlos de forma descendente, aprovechamos que anteriormente el algoritmo los organizo de forma ascendente, y vamos a intercambiar este orden
+Para la potencia del mayor elevado al menor, vamos a hallar el valor mas alto y menor en la lista, y procedemos a elevarlos
+Y por ultimo, para hallar la raiz cubica del menor, es seleccionar el numero menor y elevador a la potencia 1/3
+
 </details>
 
 # 8
@@ -271,13 +304,13 @@ elif frecuencia > 300e6:
 elif frecuencia > 30e6:
     print("su onda se encuenra en la region de Muy Alta Frecuencia-Radio")
 elif frecuencia > 1.7e6:
-    print("su onda se encuenra en la region de Onda Corta-Radio")
+    print("su onda se encuenra en la region del espectro Corta-Radio")
 elif frecuencia > 650e3:
-    print("su onda se encuenra en la region de Onda Media-Radio")
+    print("su onda se encuenra en la region del espectro Media-Radio")
 elif frecuencia > 30e3:
-    print("su onda se encuenra en la region de Onda Larga-Radio")
+    print("su onda se encuenra en la region del espectro Larga-Radio")
 else:
-    print("su onda se encuenra en la region Muy baja de frecuencia-Radio")
+    print("su onda se encuenra en la region del espectro Muy baja de frecuencia-Radio")
 ```
 <details>
   <summary>explicacion</summary>
@@ -366,7 +399,7 @@ match pais:
 <details>
   <summary>explicacion</summary>
  
-> Este código solicita al usuario que ingrese el nombre de un país americano en minúsculas y luego muestra la capital correspondiente a ese país. Utiliza una estructura de control llamada match (del condicional "case/switch" ya conocido) para comparar el país ingresado con una lista de países y sus capitales. Si el país coincide con uno de los casos definidos, se imprime la capital correspondiente. Por ejemplo, si el usuario ingresa "canada", se imprime "Otawwa". Cada caso en el match maneja un país específico y su capital asociada, lo que facilita al usuario obtener la información deseada de manera rápida y directa.
+> Este código solicita al usuario que ingrese el nombre de un país americano en minúsculas y luego muestra la capital correspondiente a ese país. Utiliza una estructura de control llamada match (del condicional "case/switch" ya conocido) para comparar el país ingresado con una lista de países y sus capitales. Si el país coincide con uno de los casos definidos, se imprime la capital correspondiente. Por ejemplo, si el usuario ingresa "canada", se imprime "Otawwa". Cada caso en el match maneja un país específico y su capital asociada, lo que facilita al usuario obtener la información deseada de manera rápida y directa. En caso de que el pais no pertenezca al continente americano, el codigo no devolvera una capital
 
   
 </details>
@@ -376,7 +409,7 @@ match pais:
 
 ```mermaid
 graph TB;
-    A[Clase Programa Cálculos de Tiempo] -->|maginitudes en m/s| B[luz: float = 299792458 
+ A[Clase Programa Cálculos de Tiempo] -->|maginitudes en m/s| B[luz: float = 299792458 
     sonido: float = 343.2 
     ssc_tatuara: float = 141.31 
     bolt: float = 12.2 
@@ -394,11 +427,43 @@ graph TB;
     E --> H[El tiempo que se demora el SCC Tahuara, actual carro comercial más rápido del mercado 
     en su velocidad promedio de 141.31 metros/segundos son: *tiempossc* segundos]   
     E --> I[El tiempo que se demora el corredor más rápido de los tiempos, el mismísimo Usain Bolt; son: *tiempobolt* segundos]
-
 ```
 
 ```ruby
- 
+ '''
+Escriba un programa que dada una distancia calcule:
+
+El tiempo que le tomaría a la luz recorrer la distancia.
+El tiempo que le tomaría al sonido (en el aire) recorrer la distancia.
+El tiempo que le tomaría al vehiculo comercial más veloz recorrer la distancia.
+El tiempo que le tomaría a Bolt recorrer la distancia.
+
+'''
+
+#magnitudes en metro x segundo 
+luz = float(299792458)
+sonido = float(343.2)
+ssc_tatuara = float(141.31)
+bolt = float(12.2)
+
+print("A continuación escriba una determinada distancia, a la cual se le van a aplicar diversos cálculos, entre ellos: ") 
+print("Tiempo que le tomaría a la luz recorrer la distancia, al sonido, al vehículo SSC Tuatara (es el más veloz del mercado) y a Bolt")
+dist = float(input("¿Cuál es la distancia a analizar? (Escríbala en metros): "))
+
+'''
+tiempo = distancia / velocidad
+'''
+
+tiempoluz = (dist / luz) 
+tiemposonido = dist / sonido
+tiempossc = dist / ssc_tatuara
+tiempobolt = dist / bolt 
+
+print(f"El tiempo que se demora la luz son: {tiempoluz} segundos")
+print(f"El tiempo que se demora el sonido en el viento son: {tiemposonido} segundos")
+print(f"El tiempo que se demora el SCC Tahuara, actual carro comercial más rápido del mercado en su velocidad promedio de 141.31 metros/segundos son: {tiempossc} segundos")
+print(f"El tiempo que se demora el corredor más rápido de los tiempos, el mismísimo Usain Bolt; son: {tiempobolt} segundos")
+
 ```
 <details>
   <summary>explicacion</summary>
