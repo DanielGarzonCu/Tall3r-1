@@ -319,10 +319,10 @@ else:
 
 </details>
 
-```
+
 Un video mas increible del mundo:
 https://www.youtube.com/watch?v=jtnxR4lS53k
-```
+
 # 9 
 ```ruby
 pais = input("De qué país americano deseas conocer su capital? (escríbelo en minúsculas) ")
